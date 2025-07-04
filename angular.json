@@ -20,6 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/kais-blkc.github.io/compo/",
+            "deployUrl": "/kais-blkc.github.io/compo/",
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -61,11 +63,7 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production",
-          "github-pages": {
-            "baseHref": "/kais-blkc.github.io/compo/",
-            "deployUrl": "/kais-blkc.github.io/compo/"
-          }
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
