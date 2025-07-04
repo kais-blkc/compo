@@ -1,0 +1,33 @@
+.tabs {
+  &-title-list {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    gap: 10px;
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 15px 32px;
+    cursor: pointer;
+    flex-shrink: 0;
+    background-color: var(--black-ghost);
+    color: var(--black-secondary);
+    transition: var(--trans-02s);
+
+    &.--active {
+      background-color: var(--brand-ghost);
+      color: var(--brand-primary);
+    }
+  }
+
+  &__item-content {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

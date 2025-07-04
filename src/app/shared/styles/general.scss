@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--black-primary);
+}
+
+.app-container {
+  max-width: 1300px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.btn {
+  &-reset {
+    background: none;
+    cursor: pointer;
+    border: none;
+  }
+  &-icon {
+    cursor: pointer;
+    transition: var(--trans-02s);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.w-100p {
+  width: 100%;
+}
+
+.h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+.df-jc-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.df-gap {
+  &-5 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &-10 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &-15 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &-20 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &.df-gap-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.text {
+  &-tb-12 {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+  }
+  &-tb-14 {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+  }
+  &-special-btn {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.text-color {
+  &--success {
+    color: var(--success-primary);
+  }
+}

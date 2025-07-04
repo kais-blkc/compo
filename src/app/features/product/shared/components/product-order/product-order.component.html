@@ -1,0 +1,46 @@
+<div class="product-order">
+  <div class="app-container">
+    <div class="df-jc-sb">
+      <div class="product-order__price h4">
+        {{ product.price | numberWithSpaces }}
+        &#8381;
+      </div>
+
+      <div class="product-order__coins text-color--success text-tb-14 df-gap-5">
+        <img
+          src="img/coin.svg"
+          alt=""
+        />
+        <span> +{{ product.points }} баллов </span>
+      </div>
+    </div>
+
+    <div class="product-order__availability-list">
+      <!--  -->
+      @for (item of product.availability; track $index) {
+        <div class="product-order__availability">
+          <div class="df-jc-sb">
+            <div class="product-order__availability-title text-tb-14">
+              {{ item.city }}
+            </div>
+
+            <app-btn-buy></app-btn-buy>
+          </div>
+
+          <div class="product-order__availability-params">
+            <app-key-value
+              key="В наличии"
+              [value]="item.quantity + ' шт.'"
+            ></app-key-value>
+
+            <app-key-value
+              key="Дата поставки"
+              [value]="item.delivery_date"
+            ></app-key-value>
+          </div>
+        </div>
+      }
+      <!--  -->
+    </div>
+  </div>
+</div>

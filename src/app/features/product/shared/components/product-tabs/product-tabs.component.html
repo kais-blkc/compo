@@ -1,0 +1,22 @@
+<div class="product-tabs">
+  <div class="app-container">
+    <app-tabs
+      [tabs]="[
+        { title: 'Описание', content: descriptionTpl },
+        { title: 'Характеристики', content: specsTpl },
+      ]"
+    ></app-tabs>
+  </div>
+
+  <ng-template #descriptionTpl>
+    @for (item of product.description; track $index) {
+      <app-key-value
+        [key]="item?.key"
+        [value]="item?.value"
+        [style]="'fifty-fifty'"
+      ></app-key-value>
+    }
+  </ng-template>
+
+  <ng-template #specsTpl> Характеристики текст </ng-template>
+</div>

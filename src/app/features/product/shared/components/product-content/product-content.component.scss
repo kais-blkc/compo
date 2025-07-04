@@ -1,0 +1,60 @@
+:host {
+  max-width: 100%;
+}
+
+.product-content {
+  position: relative;
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: absolute;
+    top: 16px;
+    left: 5%;
+  }
+
+  &__img {
+    --img-height: 300px;
+    width: 100%;
+    height: var(--img-height);
+    @media (min-width: 768px) {
+      --img-height: 400px;
+    }
+    @media (min-width: 1000px) {
+      --img-height: 500px;
+    }
+
+    img {
+      width: 100%;
+      height: var(--img-height);
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      @media (min-width: 768px) {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .product-content {
+      &__brand {
+        width: 162px;
+      }
+      &__chars {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}

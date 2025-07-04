@@ -7,7 +7,10 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "changeDetection": "OnPush",
+          "skipTests": true,
+          "style": "scss",
+          "prefix": "app"
         }
       },
       "root": "",
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/compo",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -58,7 +61,11 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "production",
+          "github-pages": {
+            "baseHref": "/kais-blkc.github.io/compo/",
+            "deployUrl": "/kais-blkc.github.io/compo/"
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

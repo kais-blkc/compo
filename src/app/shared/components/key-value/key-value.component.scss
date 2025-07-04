@@ -1,0 +1,19 @@
+.key-value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  &__key {
+    color: var(--black-secondary);
+  }
+
+  &.fifty-fifty {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="tabs">
+  <div class="tabs-title-list">
+    @for (item of tabs; track $index) {
+      <button
+        class="tabs__item-title text-special-btn btn-reset"
+        (click)="activeTabIndex.set($index)"
+        [class.--active]="activeTabIndex() === $index"
+      >
+        {{ item.title }}
+      </button>
+    }
+  </div>
+
+  <div class="tabs__item-content">
+    <ng-container
+      [ngTemplateOutlet]="tabs[activeTabIndex()].content"
+    ></ng-container>
+  </div>
+</div>

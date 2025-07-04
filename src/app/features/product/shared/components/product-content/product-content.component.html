@@ -1,0 +1,53 @@
+<div class="product-content">
+  <div class="app-container">
+    <div class="product-content__btns">
+      <button class="btn-reset btn-icon">
+        <img
+          src="img/arrow-left-gray.svg"
+          alt=""
+        />
+      </button>
+
+      <button class="btn-reset btn-icon">
+        <img
+          src="img/favorite-gray.svg"
+          alt=""
+        />
+      </button>
+    </div>
+
+    <div class="product-content__img">
+      @if (product.img.length > 0) {
+        <img
+          src="{{ product.img[0] }}"
+          alt=""
+        />
+      }
+    </div>
+
+    <div class="product-content__content">
+      <div class="h4 product-content__title">
+        {{ product.name }}
+      </div>
+
+      <div class="product-content__brand">
+        <img
+          src="{{ product.logo }}"
+          alt=""
+        />
+      </div>
+
+      <div class="product-content__chars">
+        <app-key-value
+          key="Артикул"
+          [value]="product.article"
+        ></app-key-value>
+
+        <app-key-value
+          key="Код поставщика"
+          [value]="product.supplier_code"
+        ></app-key-value>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="btn-buy">
+  @if (count > 0) {
+    <div class="btn-buy__count">
+      <button
+        class="btn-reset btn-icon"
+        (click)="decrement()"
+      >
+        <img
+          src="img/minus-blue.svg"
+          alt=""
+        />
+      </button>
+
+      <span>{{ count }} шт</span>
+
+      <button
+        class="btn-reset btn-icon"
+        (click)="increment()"
+      >
+        <img
+          src="img/plus-blue.svg"
+          alt=""
+        />
+      </button>
+    </div>
+  }
+
+  @if (count < 1) {
+    <button
+      class="btn-buy__new"
+      (click)="increment()"
+    >
+      В корзину
+      <img
+        src="img/basket-white.svg"
+        alt=""
+      />
+    </button>
+  }
+</div>
