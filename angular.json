@@ -20,8 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/kais-blkc.github.io/compo/",
-            "deployUrl": "/kais-blkc.github.io/compo/",
+            "baseHref": "/compo/",
+            "deployUrl": "/compo/",
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
